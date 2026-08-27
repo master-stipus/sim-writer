@@ -42,6 +42,7 @@ def main() -> None:
             config[section]["entry01text"] = f'"{name}"'
 
     # Сохраняем объект ConfigParser в файл.
+    # Здесь аккуратнее с кодировкой! Возможно ее стоит заменить на UTF-8.
     with open(BASE_DIR / "new_contacts.txt", "w", encoding="utf-16") as f:
         config.write(f)
 
